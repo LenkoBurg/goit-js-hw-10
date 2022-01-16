@@ -38,7 +38,7 @@ function onInput() {
 inputNode.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY))
 
 function regenerCountriesList(countries) {
-    countryItem.innerHTML = '';
+    countriesList.innerHTML = '';
 
     const markUp = countries.map(country => {
         return `
@@ -49,11 +49,11 @@ function regenerCountriesList(countries) {
         `;
     }).join('')
 
-    countryItem.innerHTML = markUp;
+    countriesList.innerHTML = markUp;
 }
 
 function infoCountries(countries) {
-    countriesList.innerHTML = '';
+    countryItem.innerHTML = '';
 
     const markUp = countries.map(country => {
         return `
@@ -67,5 +67,5 @@ function infoCountries(countries) {
         `;
     }).join('')
 
-    countriesList.innerHTML = markUp;
+    countryItem.innerHTML = markUp;
 }
