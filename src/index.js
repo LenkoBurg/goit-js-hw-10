@@ -9,17 +9,17 @@ const countriesList = document.querySelector('.country-list')
 const countryItem = document.querySelector('.country-info')
 
 function onInput() {
-    const inpuText = inputNode.value.trim()
+    const inputText = inputNode.value.trim()
 
     countriesList.innerHTML = '';
     countryItem.innerHTML = '';
 
-    if (!inpuText) {
+    if (!inputText) {
         return
     }
 
 
-    fetchCountries(inpuText)
+    fetchCountries(inputText)
         .then((countries) => {
             if (countries.status === 404) {
                 return  Notiflix.Notify.failure("Oops, there is no country with that name.");
